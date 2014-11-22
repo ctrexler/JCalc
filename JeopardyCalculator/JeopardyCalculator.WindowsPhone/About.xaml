@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="JeopardyCalculator.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JeopardyCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="JCalc" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="about" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ScrollViewer VerticalScrollMode="Enabled">
+                <StackPanel>
+                    <TextBlock Text="version" FontSize="36" FontFamily="Segoe WP Light" />
+                    <TextBlock Text="JCalc v0.95" FontSize="20" FontFamily="Segoe WP Light" Margin="40,10,0,0" />
+                    <TextBlock Text="creator" FontSize="36" FontFamily="Segoe WP Light" Margin="0,40,0,0" />
+                    <TextBlock Text="Corbin Trexler" FontSize="20" FontFamily="Segoe WP Light" Margin="40,10,0,0" />
+                    <TextBlock Text=". : neochronomo@outlook.com" FontSize="20" FontFamily="Segoe WP Light" Margin="40,5,0,0" />
+                    <RichTextBlock FontSize="20" FontFamily="Segoe WP Light" Margin="40,5,0,0">
+                        <Paragraph>
+                            . :
+                            <Hyperlink NavigateUri="https://github.com/ctrexler">https://github.com/ctrexler</Hyperlink>
+                        </Paragraph>
+                    </RichTextBlock>
+                    <TextBlock Text="about" FontSize="36" FontFamily="Segoe WP SemiLight" Margin="0,40,0,0" />
+                    <TextBlock Text="Bleep bloop" FontSize="20" FontFamily="Segoe WP Light" Margin="40,10,0,0" />
+                    <TextBlock Text="changelog" FontSize="36" FontFamily="Segoe WP SemiLight" Margin="0,40,0,0" />
+                    <TextBlock Text="11.06.2014 - Placed in App Store" FontSize="20" FontFamily="Segoe WP Light" Margin="40,10,0,0" />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
